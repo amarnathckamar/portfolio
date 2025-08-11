@@ -1,4 +1,9 @@
-# amarnathckamar.github.io
+# 🌐 My Website
+
+A simple static website built using **HTML** and **CSS** and hosted on **GitHub Pages**.
 
 
-https://amarnathckamar.github.io/
+
+---
+
+## 📂 Project Structure
