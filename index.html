@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amarnath | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <header class="header">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div class="logo">Amarnath.</div>
+        <div class="menu">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Background Animation -->
+    <div class="background">
+        <div class="programming-animation" id="code-animation"></div>
+    </div>
+
+    <!-- Home Section -->
+    <div class="home-main" id="home">
+        <section class="home">
+            <div class="home-content">
+                <p>Hi..<br />I'm <span>Amarnath</span><br />
+                    <span class="typing"></span>
+                </p>
+            </div>
+        </section>
+    </div>
+    <div class="home-sci">
+        <nav>
+            <a href="https://www.facebook.com/amar8ck/"><img src="/asset/bxl-facebook-circle.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/amar_c_k/"><img src="/asset/bxl-instagram.svg" alt="Instagram"></a>
+            <a href="https://www.linkedin.com/in/amar-ck22/"><img src="/asset/bxl-linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://github.com/amarnathckamar"><img src="/asset/bxl-github.svg" alt="GitHub"></a>
+        </nav>
+    </div>
+
+    <script src="/anim.js"></script>
+
+    <script>
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const navbar = document.querySelector(".navbar ul");
+
+        hamburgerMenu.addEventListener("click", () => {
+            navbar.classList.toggle("show");
+        });
+    </script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

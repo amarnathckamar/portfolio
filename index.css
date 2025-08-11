@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: none;
+}
+
+
+
+/* .cursor-dot, */
+.cursor-outline {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Prevent blocking interactions */
+    mix-blend-mode: screen;
+    /* Enhances the neon effect on dark backgrounds */
+}
+
+/* Laser Core (Small Dot) */
+/* .cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    box-shadow:
+        0 0 5px lightgreen,
+        0 0 10px lightgreen,
+        0 0 20px lightgreen,
+        0 0 30px lightgreen;
+    animation: pulse 0.5s infinite;
+    z-index: 1000;
+} */
+
+/* Laser Glow and Trail */
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.2) 0%, rgba(0, 255, 0, 0) 70%);
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px lightgreen,
+        0 0 30px lightgreen,
+        0 0 50px lightgreen,
+        0 0 100px rgba(0, 255, 0, 0.5);
+    animation: glow-trail 1s infinite;
+    z-index: 999;
+}
+
+/* Pulsing Effect for the Dot */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.8;
+    }
+}
+
+/* Glowing Trail Effect */
+@keyframes glow-trail {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 0.9;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul a:hover {
+    color: #f39c12;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+/* Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programming-animation {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    color: #0f0;
+    white-space: pre-wrap;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-right: 2px solid transparent;
+    }
+}
+
+/* Home Section */
+.home-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.home-content p {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.home-content span {
+    color: #f39c12;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #41f09e;
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+}
+
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+        /* Increase font size on smaller screens */
+    }
+
+
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        width: 95%;
+    }
+
+    .navbar ul {
+        display: none;
+        /* Hide menu by default */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 10px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        /* Show the menu when "show" class is added */
+    }
+
+    .hamburger-menu {
+        display: flex;
+        position: absolute;
+        right: 10px;
+    }
+
+    .programming-animation {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .home-content p {
+        font-size: 24px;
+    }
+
+    .home-sci {
+        bottom: 20px;
+        max-width: 250px;
+    }
+
+    .home-sci a {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .programming-animation {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .home-content p {
+        font-size: 20px;
+    }
+
+    .home-sci {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .home-sci a {
+        width: 25px;
+        height: 25px;
+    }
+}
